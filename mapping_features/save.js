@@ -82,7 +82,7 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "Swinburg Bridge" },
+      "properties": { "name": "Swinburg Bridge North" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
@@ -154,7 +154,7 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "Swinburg bridge return stop" },
+      "properties": { "name": "Swinburg bridge South" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,

@@ -541,7 +541,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Swinburg Bridge"
+        "name": "Swinburg Bridge North"
       },
       "geometry": {
         "type": "Point",
@@ -653,7 +653,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Swinburg bridge return stop"
+        "name": "Swinburg bridge South"
       },
       "geometry": {
         "type": "Point",
