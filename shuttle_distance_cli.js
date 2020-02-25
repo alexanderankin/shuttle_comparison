@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 var fs = require('fs');
 
-var geolib = require('geolib');
+var { MonOaklandCounter: { pathDistance } } = require('./calculate_shuttle_distance');
 
-function input(argument) {
-  return JSON.parse(fs.readFileSync('input.json', 'utf8'));
+function input(inputFile = 'coordinates.json') {
+  return JSON.parse(fs.readFileSync(inputFile, 'utf8'));
 }
 
 function output(contents) {
@@ -12,9 +12,31 @@ function output(contents) {
 }
 
 async function main() {
-  var { geometry } = input();
-  var { coordinates } = geometry;
+  // var { geometry } = input();
+  // var { coordinates } = geometry;
+  var coordinates = input();
 
+  /**
+   * This is a list of which stops on the path are the stops
+   */
+  var indexes = [
+    0,
+    7,
+    14,
+    21,
+    30,
+    37,
+    45,
+    46,
+    56,
+    60,
+    65,
+    69,
+    81,
+  ];
+
+  // console.log(pathDistance())
+  console.log(coordinates)
 }
 
 if (require.main === module) {
