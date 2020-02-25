@@ -17,8 +17,6 @@
 
       console.log(i, indexes[stop])
       if (i === indexes[stop]) {
-        // console.log(stop, 'to get to', cumulativeMeterHrPMi * MIPERMETER, cumulativeMeters)
-        // console.log(cumulativeMeterHrPMi * MIPERMETER, cumulativeMeters)
         times.push({
           minutes: (cumulativeMeterHrPMi * MIPERMETER * 60) + delay,
           meters: cumulativeMeters
@@ -26,7 +24,10 @@
         cumulativeMeterHrPMi = 0;
         cumulativeMeters = 0;
         stop +=1;
-        break;
+
+        if (stop >= indexes.length) {
+          break;
+        }
       }
 
       var distanceThisNext = geolib.getDistance(getCoord(i), getCoord(i+1));

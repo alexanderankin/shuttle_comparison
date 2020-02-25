@@ -37,7 +37,7 @@ async function main() {
     104,  // Panther Hollow stop
   ];
 
-  console.log(pathDistance(coordinates, indexes))
+  output(pathDistance(coordinates, indexes))
   // console.log(coordinates)
 }
 
