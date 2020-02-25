@@ -14,12 +14,13 @@ var stops = [
   45,  // Hot metal bridge stop
   46,  // PTC return
   56,  // Hazelwood & Gloster
-  60,  // Gloster W Eliz
-  65,  // Sylvan and Hazelwood
-  69,  // Bud Hammer stop
-  81,  // Swinburg bridge return stop
-  100,  // half way through PH
-  105,  // Panther Hollow stop
+  60,  // Eliz and Second
+  66,  // Sylvan and Hazelwood
+  70 + 1,  // Bud Hammer stop
+  81 + 1,  // Swinburg bridge return stop
+  95,      // 
+  102,  // half way through PH
+  107,  // Panther Hollow stop
 ];
 var a = {
   "type": "FeatureCollection",
@@ -128,7 +129,7 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "Gloster W Eliz" },
+      "properties": { "name": "Eliz and Second" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
@@ -164,6 +165,15 @@ var a = {
     },
     {
       "type": "Feature",
+      "properties": { "name": "Swinburg bridge North return" },
+      "geometry": {
+        "type": "Point",
+        "stopIndex": stopIndex,
+        "coordinates": coordinates[stops[stopIndex++]]
+      }
+    },
+    {
+      "type": "Feature",
       "properties": { "name": "half way through PH return" },
       "geometry": {
         "type": "Point",
@@ -179,7 +189,7 @@ var a = {
         "stopIndex": stopIndex,
         "coordinates": coordinates[stops[stopIndex++]]
       }
-    },
+    }
   ]
 }
 
