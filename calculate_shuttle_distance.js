@@ -16,7 +16,6 @@
     for (var i = 0;; i++) {
       var coordinate = getCoord(i);
 
-      console.log(i, indexes[stop])
       if (i === indexes[stop]) {
         times.push({
           minutes: (cumulativeMeterHrPMi * MIPERMETER * 60) + delay,
