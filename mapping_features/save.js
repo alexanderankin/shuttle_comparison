@@ -8,7 +8,7 @@ var stops = [
   14,  // HILLMAN
   21,  // Panther Hollow stop
   30,  // half way through PH
-  37,  // Swinburg Bridge
+  // 37,  // Swinburg Bridge
   45,  // Hot metal bridge stop
   46,  // HMB #2 stop
   56,  // Hazelwood & Gloster
@@ -79,15 +79,15 @@ var a = {
         "coordinates": coordinates[stops[stopIndex++]]
       }
     },
-    {
-      "type": "Feature",
-      "properties": { "name": "Swinburg Bridge" },
-      "geometry": {
-        "type": "Point",
-        "stopIndex": stopIndex,
-        "coordinates": coordinates[stops[stopIndex++]]
-      }
-    },
+    // {
+    //   "type": "Feature",
+    //   "properties": { "name": "Swinburg Bridge" },
+    //   "geometry": {
+    //     "type": "Point",
+    //     "stopIndex": stopIndex,
+    //     "coordinates": coordinates[stops[stopIndex++]]
+    //   }
+    // },
     {
       "type": "Feature",
       "properties": { "name": "Hot metal bridge stop" },
