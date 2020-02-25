@@ -20,19 +20,21 @@ async function main() {
    * This is a list of which stops on the path are the stops
    */
   var indexes = [
-    0,
-    7,
-    14,
-    21,
-    30,
-    37,
-    45,
-    46,
-    56,
-    60,
-    65,
-    69,
-    81,
+    0,   // FINAL STOP (CMU)
+    7,   // Panther Hollow stop
+    14,  // HILLMAN
+    21,  // Panther Hollow stop
+    30,  // half way through PH
+    37,  // Swinburg Bridge
+    45,  // Hot metal bridge stop
+    46,  // HMB #2 stop
+    56,  // Hazelwood & Gloster
+    60,  // Gloster W Eliz
+    65,  // Sylvan and Hazelwood
+    69,  // Bud Hammer stop
+    81,  // Swinburg bridge return stop
+    99,  // half way through PH
+    104,  // Panther Hollow stop
   ];
 
   console.log(pathDistance(coordinates, indexes))
