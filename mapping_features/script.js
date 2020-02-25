@@ -73,5 +73,13 @@ function addMarker(index, title) {
 }
 
 function addGeoJSON(mymap, geoJSON) {
-  L.geoJSON(geoJSON).addTo(mymap);
+  L.geoJSON(geoJSON, {
+    pointToLayer: function(feature,latlng) {
+      console.log('hey');
+      label = String(feature.properties.name) // Must convert to string, .bindTooltip can't use straight 'feature.properties.attribute'
+      return new L.CircleMarker(latlng, {
+        radius: 1,
+      }).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip();
+    }
+  }).addTo(mymap);
 }
