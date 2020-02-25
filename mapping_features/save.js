@@ -90,7 +90,7 @@ var a = {
     // },
     {
       "type": "Feature",
-      "properties": { "name": "Hot metal bridge stop" },
+      "properties": { "name": "PTC" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
