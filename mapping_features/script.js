@@ -13,8 +13,8 @@ $(async () => {
   // var southWest = L.latLng(40.432412288025354,-79.95860338211061);
   // var northEast = L.latLng(40.43894515841954,-79.9437975883484);
 
-    var southWest = L.latLng(40.405424809575386,-79.94720935821535);
-  var northEast = L.latLng(40.41032648783207,-79.93980646133423);
+  var southWest = L.latLng(40.408790667048834,-79.98364448547365);
+  var northEast = L.latLng(40.447992135544304,-79.92442131042482);
   var initialBounds = L.latLngBounds(southWest, northEast);
 
   var mymap = L.map('mapid').setView([51.505, -0.09], 13);

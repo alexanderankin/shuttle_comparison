@@ -16,8 +16,8 @@ var stops = [
   65,  // Sylvan and Hazelwood
   69,  // Bud Hammer stop
   81,  // Swinburg bridge return stop
-  99,  // half way through PH
-  104,  // Panther Hollow stop
+  100,  // half way through PH
+  105,  // Panther Hollow stop
 ];
 var a = {
   "type": "FeatureCollection",
