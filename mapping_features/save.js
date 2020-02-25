@@ -2,6 +2,23 @@ var fs = require('fs');
 var coordinates = JSON.parse(fs.readFileSync('../coordinates.json', 'utf8'))
 
 var stopIndex = 0;
+var stops = [
+  0,   // FINAL STOP (CMU)
+  7,   // Panther Hollow stop
+  14,  // HILLMAN
+  21,  // Panther Hollow stop
+  30,  // half way through PH
+  37,  // Swinburg Bridge
+  45,  // Hot metal bridge stop
+  46,  // HMB #2 stop
+  56,  // Hazelwood & Gloster
+  60,  // Gloster W Eliz
+  65,  // Sylvan and Hazelwood
+  69,  // Bud Hammer stop
+  81,  // Swinburg bridge return stop
+  99,  // half way through PH
+  104,  // Panther Hollow stop
+];
 var a = {
   "type": "FeatureCollection",
   "properties": {
@@ -23,7 +40,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -32,7 +49,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -41,7 +58,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -50,7 +67,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -59,7 +76,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -68,7 +85,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -77,7 +94,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -86,7 +103,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -95,7 +112,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -104,7 +121,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -113,7 +130,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -122,7 +139,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -131,7 +148,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -140,7 +157,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
     {
@@ -149,7 +166,7 @@ var a = {
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
-        "coordinates": coordinates[stopIndex++]
+        "coordinates": coordinates[stops[stopIndex++]]
       }
     },
   ]
