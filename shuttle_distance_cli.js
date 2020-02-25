@@ -35,8 +35,8 @@ async function main() {
     81,
   ];
 
-  // console.log(pathDistance())
-  console.log(coordinates)
+  console.log(pathDistance(coordinates, indexes))
+  // console.log(coordinates)
 }
 
 if (require.main === module) {

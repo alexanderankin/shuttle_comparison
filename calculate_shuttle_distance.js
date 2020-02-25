@@ -3,31 +3,35 @@
   var moc = exports.MonOaklandCounter = exports.MonOaklandCounter || {};
   var MIPERMETER = moc.MIPERMETER = 0.000621371;
 
-  function pathDistance(coordinates, indexes, milesPerHour = 15) {
+  function pathDistance(coordinates, indexes, milesPerHour = 15, delay = 0.5) {
     var stop = 0;
     var cumulativeMeters = 0;
     var cumulativeMeterHrPMi = 0;
 
     var times = [];
 
-    for (var i = 1; i < coordinates.length - 1; i++) {
-      var coordinate = coordinates[i];
+    var getCoord = index => coordinates[index % coordinates.length];
+    
+    for (var i = 0;; i++) {
+      var coordinate = getCoord(i);
 
-      if (i === indexes[stop].index) {
+      console.log(i, indexes[stop])
+      if (i === indexes[stop]) {
         // console.log(stop, 'to get to', cumulativeMeterHrPMi * MIPERMETER, cumulativeMeters)
         // console.log(cumulativeMeterHrPMi * MIPERMETER, cumulativeMeters)
         times.push({
-          minutes: cumulativeMeterHrPMi * MIPERMETER * 60,
+          minutes: (cumulativeMeterHrPMi * MIPERMETER * 60) + delay,
           meters: cumulativeMeters
         });
         cumulativeMeterHrPMi = 0;
         cumulativeMeters = 0;
         stop +=1;
+        break;
       }
 
-      var distanceThisNext = geolib.getDistance(coordinates[i], coordinates[i+1]);
+      var distanceThisNext = geolib.getDistance(getCoord(i), getCoord(i+1));
       cumulativeMeters += distanceThisNext;
-      console.log('to point', i, 'distanceThisNext', distanceThisNext)
+      // console.log('to point', i, 'distanceThisNext', distanceThisNext)
       cumulativeMeterHrPMi += distanceThisNext / milesPerHour;
     }
 
