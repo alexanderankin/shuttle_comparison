@@ -1,0 +1,8 @@
+.leaflet-map-container {
+  position: relative;
+}
+
+.leaflet-map {
+  height: 600px;
+  width: 100%;
+}

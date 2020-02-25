@@ -1,0 +1,12 @@
+{
+  "name": "shuttle_comparison",
+  "version": "1.0.0",
+  "private": "yes",
+  "main": "index.js",
+  "repository": "git@github.com:alexanderankin/shuttle_comparison.git",
+  "author": "David Ankin <daveankin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "geolib": "^3.2.1"
+  }
+}
