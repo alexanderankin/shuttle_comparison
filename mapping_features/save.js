@@ -153,7 +153,7 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "half way through PH" },
+      "properties": { "name": "half way through PH return" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
@@ -162,7 +162,7 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "Panther Hollow stop" },
+      "properties": { "name": "Panther Hollow stop return" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
@@ -173,7 +173,7 @@ var a = {
 }
 
 
-fs.writeFileSync('path.geojson', JSON.stringify(a), 'utf8');
+fs.writeFileSync('path.geojson', JSON.stringify(a, null, 2), 'utf8');
 // fs.writeFileSync('perch-resources-boundary-street-to-saline-street-south-of-junction-hollow.geojson', JSON.stringify(a), 'utf8');
 
 // var { exec } = require('child_process');
