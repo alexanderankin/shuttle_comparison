@@ -541,11 +541,39 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "PTC"
+        "name": "Swinburg Bridge"
       },
       "geometry": {
         "type": "Point",
         "stopIndex": 5,
+        "coordinates": [
+          -79.95066404342653,
+          40.42687518344919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PTC"
+      },
+      "geometry": {
+        "type": "Point",
+        "stopIndex": 6,
+        "coordinates": [
+          -79.95371103286745,
+          40.42602579374641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hot Metal Bridge"
+      },
+      "geometry": {
+        "type": "Point",
+        "stopIndex": 7,
         "coordinates": [
           -79.9578094482422,
           40.4300276322111
@@ -555,11 +583,11 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "HMB #2 stop"
+        "name": "PTC return"
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 6,
+        "stopIndex": 8,
         "coordinates": [
           -79.95379686355592,
           40.42605846277947
@@ -573,7 +601,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 7,
+        "stopIndex": 9,
         "coordinates": [
           -79.94523525238039,
           40.4112087520061
@@ -587,7 +615,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 8,
+        "stopIndex": 10,
         "coordinates": [
           -79.94411408901216,
           40.40700972459731
@@ -601,7 +629,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 9,
+        "stopIndex": 11,
         "coordinates": [
           -79.94163036346437,
           40.41155185161675
@@ -615,7 +643,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 10,
+        "stopIndex": 12,
         "coordinates": [
           -79.94660854339601,
           40.41885455699726
@@ -629,7 +657,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 11,
+        "stopIndex": 13,
         "coordinates": [
           -79.94984731078148,
           40.4256664333354
@@ -643,7 +671,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 12,
+        "stopIndex": 14,
         "coordinates": [
           -79.94960054755212,
           40.43652807035294
@@ -657,7 +685,7 @@
       },
       "geometry": {
         "type": "Point",
-        "stopIndex": 13,
+        "stopIndex": 15,
         "coordinates": [
           -79.94972124695778,
           40.440290442597366

@@ -8,9 +8,10 @@ var stops = [
   14,  // HILLMAN
   21,  // Panther Hollow stop
   30,  // half way through PH
-  // 37,  // Swinburg Bridge
+  37,  // Swinburg Bridge
+  40,  // PTC
   45,  // Hot metal bridge stop
-  46,  // HMB #2 stop
+  46,  // PTC return
   56,  // Hazelwood & Gloster
   60,  // Gloster W Eliz
   65,  // Sylvan and Hazelwood
@@ -79,15 +80,15 @@ var a = {
         "coordinates": coordinates[stops[stopIndex++]]
       }
     },
-    // {
-    //   "type": "Feature",
-    //   "properties": { "name": "Swinburg Bridge" },
-    //   "geometry": {
-    //     "type": "Point",
-    //     "stopIndex": stopIndex,
-    //     "coordinates": coordinates[stops[stopIndex++]]
-    //   }
-    // },
+    {
+      "type": "Feature",
+      "properties": { "name": "Swinburg Bridge" },
+      "geometry": {
+        "type": "Point",
+        "stopIndex": stopIndex,
+        "coordinates": coordinates[stops[stopIndex++]]
+      }
+    },
     {
       "type": "Feature",
       "properties": { "name": "PTC" },
@@ -99,7 +100,16 @@ var a = {
     },
     {
       "type": "Feature",
-      "properties": { "name": "HMB #2 stop" },
+      "properties": { "name": "Hot Metal Bridge" },
+      "geometry": {
+        "type": "Point",
+        "stopIndex": stopIndex,
+        "coordinates": coordinates[stops[stopIndex++]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "PTC return" },
       "geometry": {
         "type": "Point",
         "stopIndex": stopIndex,
