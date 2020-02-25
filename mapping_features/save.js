@@ -1,5 +1,6 @@
 var fs = require('fs');
-var coordinates = JSON.parse(fs.readFileSync('../coordinates.json', 'utf8'))
+var path = require('path');
+var coordinates = JSON.parse(fs.readFileSync(path.join(__dirname, '../coordinates.json'), 'utf8'))
 
 var stopIndex = 0;
 var stops = [
@@ -182,10 +183,11 @@ var a = {
   ]
 }
 
+if (require.main === module) {
+  fs.writeFileSync(path.join(__dirname, 'path.geojson'), JSON.stringify(a, null, 2), 'utf8');
+}
 
-fs.writeFileSync('path.geojson', JSON.stringify(a, null, 2), 'utf8');
-// fs.writeFileSync('perch-resources-boundary-street-to-saline-street-south-of-junction-hollow.geojson', JSON.stringify(a), 'utf8');
-
-// var { exec } = require('child_process');
-
-// exec('readlink -f path.geojson | xclip -sel clip', {shell:true}, () => {});
+module.exports = {
+  stops,
+  pathFeatureCollection: a
+};

@@ -3,12 +3,13 @@
   var moc = exports.MonOaklandCounter = exports.MonOaklandCounter || {};
   var MIPERMETER = moc.MIPERMETER = 0.000621371;
 
-  function pathDistance(coordinates, indexes, milesPerHour = 15, delay = 0.5) {
+  function pathDistance(coordinates, indexes, milesPerHour = 15, delay = 0) {
     var stop = 0;
     var cumulativeMeters = 0;
     var cumulativeMeterHrPMi = 0;
 
     var times = [];
+    var stopCounter = 0;
 
     var getCoord = index => coordinates[index % coordinates.length];
     
@@ -19,7 +20,8 @@
       if (i === indexes[stop]) {
         times.push({
           minutes: (cumulativeMeterHrPMi * MIPERMETER * 60) + delay,
-          meters: cumulativeMeters
+          meters: cumulativeMeters,
+          stopTo: stop,
         });
         cumulativeMeterHrPMi = 0;
         cumulativeMeters = 0;
