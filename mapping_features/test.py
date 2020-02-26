@@ -114,3 +114,14 @@ arr =[{'sum': [0.02526908733333333,610],
     {'to point': 79, 'distanceThisNext': 7},
     {'to point': 80, 'distanceThisNext': 5},
 ]}]
+
+def met_spd_mph(meters, mph):
+    miles = meters / 1609.34
+    min = miles / mph 
+    return(min)
+
+print(met_spd_mph(935, 15))
+
+print(len(arr))
+print(arr[0])
+print(type(arr))

@@ -27,6 +27,7 @@ async function main() {
   var result = pathDistance(coordinates, indexes);
   console.log(result)
   console.log(result.length)
+  output(result)
   // console.log(coordinates)
 }
 

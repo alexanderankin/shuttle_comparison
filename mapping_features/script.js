@@ -21,6 +21,8 @@ $(async () => {
   mymap.fitBounds(initialBounds);
 
   // add the OpenStreetMap tiles
+  // OSM : https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+  // Open Cycle Map: http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png
   L.tileLayer('http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', {
     maxZoom: 30,
     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
@@ -45,12 +47,14 @@ $(async () => {
   // show me what i made
   var response = await fetch('/path.geojson');
   var geoJSON = JSON.parse(await response.text());
+  var coordinates = geoJSON.features[0]["geometry"]["coordinates"]
   addGeoJSON(mymap, geoJSON);
+  addMarker(coordinates, mymap)
 
   // setTimeout(function() {
 
-  //   addMarker(1, '0 is index 1')
-  //   addMarker(7, '1 is index 7')
+  // addMarker(1, '0 is index 1')
+  // addMarker(7, '1 is index 7')
   //   addMarker(14, '2 is index 14')
   //   addMarker(21, '3 is index 21')
   //   addMarker(30, '4 is index 30')
@@ -68,8 +72,14 @@ $(async () => {
   window.mymap = mymap;
 });
 
-function addMarker(index, title) {
-  L.marker(coordinates[index].reverse(), { title: 'stop #' + index + (title?(' '+ title):'')}).addTo(window.mymap);
+
+function addMarker(coordinates, mymap) {
+  console.log('coords');
+  coordinates.forEach(function (item, index) {
+    label = String(index)
+    console.log(index, item);
+    L.marker(item.reverse(), { title: String(index)}).bindTooltip(label, {permanent: true, opacity: 0.7}).addTo(mymap);
+  });
 }
 
 function addGeoJSON(mymap, geoJSON) {
@@ -78,7 +88,8 @@ function addGeoJSON(mymap, geoJSON) {
       console.log('hey');
       label = String(feature.properties.name) // Must convert to string, .bindTooltip can't use straight 'feature.properties.attribute'
       return new L.CircleMarker(latlng, {
-        radius: 1,
+        radius: 5,
+        color: "red",
       }).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip();
     }
   }).addTo(mymap);
